@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Aoneng Lighting Co.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Aoneng Logo">
+        </div>
+        
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+ <div class="info-text">
+                    <h5>Welcome To Our Newly Updated Website, Stay Tune As We Transfer All Data From Our Old Site Down To The Updated One... <em>HERE!</em></h5>
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button><img src="search-icon.png" alt="Search Icon"></button>
+        </div>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Video Showcase</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Trade Fair and News</a></li>
+        </ul>
+    </nav>
+
+    
+</div>
+    <!-- Main Content -->
+    <main>
+        <!-- Image Before the Flashlight Section -->
+        <section class="intro-image">
+            <img src="back1.jpg" alt="Intro Image Before Flashlight">
+        </section>
+
+        <!-- Banner Section with Background Image for New Professional Flashlight -->
+        <section class="banner">
+            <div class="banner-text">
+                 <img src="back2.jpg" alt="Intro Image Before Flashlight">
+                <h1>New Professional Outdoor Flashlight</h1>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <div class="contact-item">
+                <img src="email-icon.jpg" alt="Email Icon">
+                <div class="info-text">
+                    <h4>Diana Liu-Aoneng</h4>
+                    <strong>Email:</strong> sales9.aoneng@mail.com
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <img src="email-icon.jpg" alt="Email Icon">
+                <div class="info-text">
+                    <h4>Elton Ke-Aoneng Lighting</h4>
+                    <strong>Email:</strong> eke.aoneng@mail.com
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <img src="email-icon.jpg" alt="Email Icon">
+                <div class="info-text">
+                    <h4>Morry_Aoneng Lighting</h4>
+                    <strong>Email:</strong> sales8.aoneng@mail.com
+                </div>
+            </div>
+
+            <!-- QR Code for sales8.aoneng@mail.com -->
+            <div class="qr-code">
+                <img src="qr.png" alt="QR Code for Morry_Aoneng Email">
+            </div>
+        </section>
+
+        <!-- Footer Section with Logo and Copyright -->
+        <footer class="footer">
+            <div class="logo-footer">
+                <img src="logo.jpg" alt="Company Logo">
+            </div>
+            <p>Copyright © 2021 All Rights Reserved</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <!-- JavaScript Section -->
+    <script>
+        // Wait for the DOM to fully load before running the script
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.getElementById("menu-icon");
+            const sidebar = document.getElementById("sidebar");
+            const closeBtn = document.getElementById("close-btn");
+
+            // Open sidebar when menu icon is clicked
+            menuIcon.addEventListener("click", function () {
+                sidebar.classList.add("active");
+            });
+
+            // Close sidebar when close button is clicked
+            closeBtn.addEventListener("click", function () {
+                sidebar.classList.remove("active");
+            });
+
+            // Optional: Close sidebar when clicking outside of it
+            window.addEventListener("click", function (e) {
+                if (e.target === sidebar) {
+                    sidebar.classList.remove("active");
+                }
+            });
+        });
+        
+        
+    </script>
+</body>
+</html>

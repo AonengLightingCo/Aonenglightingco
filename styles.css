@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #000;
+    transition: 0.3s;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar .close-btn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.sidebar .search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar .search-bar input {
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    
+}
+
+.sidebar .search-bar button img {
+    width: 16px; /* Adjust this size as needed */
+    height: 16px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Intro Image Before Flashlight Section */
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Banner - Background Image Only for New Professional Flashlight Section */
+.banner {
+    background-image: url('new-flashlight-background.jpg'); /* Add your desired image here */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+}
+
+.banner-text {
+    z-index: 10;
+}
+
+.banner-text h1 {
+    font-size: 2.5em;
+    color: #ea5e00;
+    text-align: center;
+}
+
+/* Contact Info */
+.contact-info {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.contact-info img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.info-text {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+/* /* Styling for QR Code */
+.qr-code {
+    margin-top: 20px; /* Add spacing above the QR code */
+    display: flex;
+    justify-content: center; /* Horizontally center the QR code */
+    align-items: center; /* Vertically center if necessary (not crucial here) */
+    text-align: center; /* Ensure text-align is centered */
+}
+
+.qr-code img {
+    width: 100px; /* Set the size of the QR code */
+    height: auto;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #ea5e00;
+}
+
+.footer .logo-footer img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .banner-text h1 {
+        font-size: 1.5em;
+    }
+
+    .contact-info p {
+        font-size: 1em;
+    }
+
+    .qr-code img {
+        width: 80px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-text h1 {
+        font-size: 3em;
+    }
+
+    .contact-info p {
+        font-size: 1.2em;
+    }
+}
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.scrolling-container {
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #ea5e00;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.message {
+    font-size: 24px;
+    padding: 20px;
+}
+
+
+.info-text h4{
+    color: #ea5e00;
+}
+
+.info-text h5{
+    color: #ea5e00;
+}
